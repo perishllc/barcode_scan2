@@ -52,8 +52,8 @@ class ScannerOverlay: UIView {
         UIRectFill(holeRectIntersection)
         
         // draw a horizontal line over the middle
-        let lineRect = scanLineRect
-        line.frame = lineRect
+        // let lineRect = scanLineRect
+        // line.frame = lineRect
         
         // draw the green corners
         let cornerSize: CGFloat = 30
@@ -82,7 +82,7 @@ class ScannerOverlay: UIView {
         path.addLine(to: CGPoint(x: holeRect.origin.x, y: bottomHoleY - cornerSize))
         
         path.lineWidth = 2
-        UIColor.green.setStroke()
+        UIColor.white.setStroke()
         path.stroke()
     }
     
@@ -110,7 +110,7 @@ class ScannerOverlay: UIView {
         let isLandscape = frameWidth > frameHeight
         let widthOnPortrait = isLandscape ? frameHeight : frameWidth
         let scanRectWidth = widthOnPortrait * 0.8
-        let aspectRatio: CGFloat = 3.0 / 4.0
+        let aspectRatio: CGFloat = 1.0
         let scanRectHeight = scanRectWidth * aspectRatio
         
         if isLandscape {
