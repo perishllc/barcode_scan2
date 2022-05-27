@@ -73,6 +73,7 @@ class BarcodeScannerActivity : Activity(), ZXingScannerView.ResultHandler {
             setAutoFocus(config.android.useAutoFocus)
             setLaserEnabled(false)
             setSquareViewFinder(true)
+            setBorderColor(0xFFFFFFFF.toInt())
             val restrictedFormats = mapRestrictedBarcodeTypes()
             if (restrictedFormats.isNotEmpty()) {
                 setFormats(restrictedFormats)
