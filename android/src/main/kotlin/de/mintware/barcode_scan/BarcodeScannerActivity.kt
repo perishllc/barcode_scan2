@@ -73,18 +73,17 @@ class BarcodeScannerActivity : Activity(), ZXingScannerView.ResultHandler {
             setAutoFocus(config.android.useAutoFocus)
             setLaserEnabled(false)
             setSquareViewFinder(true)
-            setAspectTolerance(0.5f)
             val restrictedFormats = mapRestrictedBarcodeTypes()
             if (restrictedFormats.isNotEmpty()) {
                 setFormats(restrictedFormats)
             }
 
             // this parameter will make your HUAWEI phone works great!
-            setAspectTolerance(config.android.aspectTolerance.toFloat())
-            if (config.autoEnableFlash) {
-                flash = config.autoEnableFlash
-                invalidateOptionsMenu()
-            }
+            // setAspectTolerance(config.android.aspectTolerance.toFloat())
+            // if (config.autoEnableFlash) {
+            //     flash = config.autoEnableFlash
+            //     invalidateOptionsMenu()
+            // }
         }
 
         setContentView(scannerView)
