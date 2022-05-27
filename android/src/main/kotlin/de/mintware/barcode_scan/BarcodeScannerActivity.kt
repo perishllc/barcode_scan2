@@ -78,6 +78,8 @@ class BarcodeScannerActivity : Activity(), ZXingScannerView.ResultHandler {
                 setFormats(restrictedFormats)
             }
 
+            setAspectTolerance(0.5f)
+
             // this parameter will make your HUAWEI phone works great!
             // setAspectTolerance(config.android.aspectTolerance.toFloat())
             // if (config.autoEnableFlash) {
@@ -85,6 +87,9 @@ class BarcodeScannerActivity : Activity(), ZXingScannerView.ResultHandler {
             //     invalidateOptionsMenu()
             // }
         }
+
+        // setAspectTolerance(0.5f)
+        // setBorderColor(0xFFFFFFFF.toInt())
 
         setContentView(scannerView)
     }
