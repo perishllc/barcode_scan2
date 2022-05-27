@@ -74,7 +74,7 @@ class BarcodeScannerActivity : Activity(), ZXingScannerView.ResultHandler {
             setLaserEnabled(false)
             setSquareViewFinder(true)
             // setAspectTolerance(0.5f)
-            // setBorderColor(0xFFFFFFFF.toInt())
+            setBorderColor(0xFFFFFFFF.toInt())
             val restrictedFormats = mapRestrictedBarcodeTypes()
             if (restrictedFormats.isNotEmpty()) {
                 setFormats(restrictedFormats)
